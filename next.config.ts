@@ -1,8 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "standalone",
-  serverExternalPackages: ["better-sqlite3"],
+  // No standalone output — Vercel handles deployment packaging itself
 };
 
 export default nextConfig;
