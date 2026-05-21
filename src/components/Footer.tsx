@@ -1,0 +1,63 @@
+import Link from "next/link";
+
+export function Footer() {
+  return (
+    <footer
+      className="border-t"
+      style={{ borderTopColor: "rgb(229,229,229)", backgroundColor: "rgb(255,255,255)" }}
+    >
+      <div className="flex flex-col gap-8 px-[42px] py-12 md:flex-row md:items-start md:justify-between">
+        {/* Brand */}
+        <div className="max-w-[320px]">
+          <p
+            className="text-xl font-bold uppercase tracking-[3px]"
+            style={{ color: "rgb(25,28,31)" }}
+          >
+            Museum Grades
+          </p>
+          <p
+            className="mt-3 text-[14px] leading-[1.6]"
+            style={{ color: "rgba(25,28,31,0.65)" }}
+          >
+            A curated catalogue of the world&apos;s finest pre-owned luxury
+            handbags — authenticated and graded for the discerning collector.
+          </p>
+        </div>
+
+        {/* Links */}
+        <div className="flex flex-col gap-3">
+          <p
+            className="text-[12px] font-semibold uppercase tracking-[1.5px]"
+            style={{ color: "rgb(25,28,31)" }}
+          >
+            Explore
+          </p>
+          <Link
+            href="/collections/all-bags"
+            className="text-[14px] hover:underline"
+            style={{ color: "rgba(25,28,31,0.75)" }}
+          >
+            All Bags
+          </Link>
+          <Link
+            href="/collections/all-bags#designers"
+            className="text-[14px] hover:underline"
+            style={{ color: "rgba(25,28,31,0.75)" }}
+          >
+            Designers
+          </Link>
+        </div>
+      </div>
+
+      <div
+        className="border-t px-[42px] py-5"
+        style={{ borderTopColor: "rgb(229,229,229)" }}
+      >
+        <p className="text-[12px]" style={{ color: "rgba(25,28,31,0.5)" }}>
+          © {new Date().getFullYear()} Museum Grades. Display catalogue only —
+          all designer names and marks belong to their respective owners.
+        </p>
+      </div>
+    </footer>
+  );
+}
