@@ -6,20 +6,29 @@ interface ProductCardProps {
 }
 
 export function ProductCard({ product }: ProductCardProps) {
+  const img = product.images[0];
+
   return (
     <div className="group relative text-center">
       {/* Product image */}
       <Link href={`/products/${product.slug}`} className="block">
         <div
-          className="flex aspect-square w-full items-center justify-center p-3"
+          className="relative aspect-square w-full overflow-hidden"
           style={{ backgroundColor: "rgb(245,245,245)" }}
         >
-          <span
-            className="text-center text-sm"
-            style={{ color: "rgba(25,28,31,0.3)" }}
-          >
-            {product.brand}
-          </span>
+          {img ? (
+            <img
+              src={img}
+              alt={`${product.brand} ${product.name}`}
+              className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          ) : (
+            <div className="flex h-full w-full items-center justify-center">
+              <span className="text-sm" style={{ color: "rgba(25,28,31,0.3)" }}>
+                {product.brand}
+              </span>
+            </div>
+          )}
         </div>
       </Link>
 
