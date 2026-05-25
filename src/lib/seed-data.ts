@@ -17,8 +17,8 @@ export const seedProducts: Product[] = [
     material: "Leather",
     bagType: "Handbags",
     images: [
-      u("photo-1679483562579-023de24ab10f"),
       u("photo-1722236525372-f1730c0735fa"),
+      u("photo-1722236525371-b5492c5cb02a"),
     ],
     description:
       "This is an authentic HERMÈS Togo Birkin 25 in Gold. Crafted of Hermès signature Togo grained calfskin leather — known for its pebbled texture and exceptional durability — in the house's most iconic colourway. The Birkin 25 is the smallest of the classic Birkin sizes, prized by collectors for its refined proportions. Hardware in palladium finish. All closures and the turn-lock function flawlessly.",
@@ -43,8 +43,8 @@ export const seedProducts: Product[] = [
     material: "Leather",
     bagType: "Crossbody Bags",
     images: [
-      u("photo-1693221161626-8ba845ded976"),
       u("photo-1586413595198-1840407316e9"),
+      u("photo-1654707635149-2c7af90afecd"),
     ],
     description:
       "This is an authentic CHANEL Caviar Quilted Wallet on Chain WOC in Beige. Crafted of diamond-quilted caviar leather — Chanel's most durable leather, resistant to scratches and retaining its shape over time — in warm beige. Features the signature interlocking CC turn-lock closure, a gold-tone chain strap, and a refined interior with card slots, a bill compartment, and a zipped coin pouch.",
@@ -93,8 +93,8 @@ export const seedProducts: Product[] = [
     material: "Canvas",
     bagType: "Handbags",
     images: [
-      u("photo-1677995700947-4b92cb1bba76"),
       u("photo-1583623733237-4d5764a9dc82"),
+      u("photo-1654707636005-5b5a96c11ab2"),
     ],
     description:
       "This is an authentic LOUIS VUITTON Monogram Multicolor Speedy 30 in White — a collaboration with artist Takashi Murakami featuring the classic Monogram pattern rendered in 33 colours on white Toile canvas. A landmark piece in fashion history, now collectible in its own right. Vachetta leather handles and trim have developed a warm patina consistent with use. All original hardware and lock set present.",
@@ -119,7 +119,7 @@ export const seedProducts: Product[] = [
     material: "Canvas",
     bagType: "Crossbody Bags",
     images: [
-      u("photo-1670984076180-22a6c8f27f2b"),
+      u("photo-1654707634812-3ce01a6258f9"),
       u("photo-1682364853446-db043f643207"),
     ],
     description:
