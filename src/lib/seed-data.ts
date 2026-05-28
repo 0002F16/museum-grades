@@ -1265,14 +1265,3 @@ export const seedProducts: Product[] = [
   },
 ];
 
-export const seedCategories = [
-  { name: "Crossbody",     image: "/images/cat-crossbody.jpg",  href: "/collections/all-bags?bagType=Crossbody+Bags" },
-  { name: "Totes",         image: "/images/cat-totes.jpg",      href: "/collections/all-bags?bagType=Totes" },
-  { name: "Shoulder Bags", image: "/images/cat-shoulder.jpg",   href: "/collections/all-bags?bagType=Shoulder+Bags" },
-  { name: "Backpacks",     image: "/images/cat-backpacks.jpg",  href: "/collections/all-bags?bagType=Backpacks" },
-  { name: "Belt Bags",     image: "/images/cat-belt.jpg",       href: "/collections/all-bags?bagType=Belt+Bags" },
-  { name: "Hobo Bags",     image: "/images/cat-hobo.jpg",       href: "/collections/all-bags?bagType=Hobo+Bags" },
-  { name: "Bucket Bags",   image: "/images/cat-bucket.jpg",     href: "/collections/all-bags?bagType=Bucket+Bags" },
-  { name: "Clutches",      image: "/images/cat-clutches.jpg",   href: "/collections/all-bags?bagType=Clutches" },
-  { name: "Satchels",      image: "/images/cat-satchels.jpg",   href: "/collections/all-bags?bagType=Satchels" },
-];

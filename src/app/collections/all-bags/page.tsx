@@ -3,7 +3,7 @@ import { Header } from "@/components/Header";
 import { CategoryCarousel } from "@/components/CategoryCarousel";
 import { FilterSidebar } from "@/components/FilterSidebar";
 import { ProductGrid } from "@/components/ProductGrid";
-import { getProducts, getFacets } from "@/lib/products";
+import { getProducts, getFacets, getCategories } from "@/lib/products";
 import type { ProductFilters } from "@/types/product";
 
 export const metadata = {
@@ -48,6 +48,7 @@ export default async function AllBagsPage({ searchParams }: PageProps) {
 
   const { products, total } = getProducts(filters);
   const facets = getFacets();
+  const categories = getCategories();
 
   const currentFilters = {
     brand: getString(sp.brand),
@@ -72,7 +73,7 @@ export default async function AllBagsPage({ searchParams }: PageProps) {
 
         {/* Category carousel */}
         <div className="px-[42px] pb-6">
-          <CategoryCarousel />
+          <CategoryCarousel categories={categories} />
         </div>
 
         {/* Filter + Product Grid */}

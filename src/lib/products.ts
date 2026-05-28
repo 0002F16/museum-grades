@@ -54,6 +54,45 @@ export function getAllProducts(): Product[] {
   return [...seedProducts];
 }
 
+export interface CategoryItem {
+  name: string;
+  image: string;
+  href: string;
+  count: number;
+}
+
+// Preferred display order — only categories that have ≥1 product are returned
+const CATEGORY_ORDER = [
+  "Crossbody Bags",
+  "Shoulder Bags",
+  "Handbags",
+  "Totes",
+  "Backpacks",
+  "Clutches",
+  "Bucket Bags",
+  "Belt Bags",
+  "Hobo Bags",
+  "Satchels",
+];
+
+export function getCategories(): CategoryItem[] {
+  const map = new Map<string, { count: number; image: string }>();
+  for (const p of seedProducts) {
+    if (!map.has(p.bagType)) {
+      map.set(p.bagType, { count: 0, image: p.images[0] ?? "" });
+    }
+    map.get(p.bagType)!.count += 1;
+  }
+  return CATEGORY_ORDER.filter((name) => (map.get(name)?.count ?? 0) > 0).map(
+    (name) => ({
+      name,
+      image: map.get(name)!.image,
+      href: `/collections/all-bags?bagType=${encodeURIComponent(name)}`,
+      count: map.get(name)!.count,
+    })
+  );
+}
+
 export function getFacets(_filters: ProductFilters = {}): FilterGroup[] {
   // Counts are always global (across the full catalogue) for discoverability
   function countBy(key: keyof Product): FilterGroup["options"] {
